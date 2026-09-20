@@ -1,0 +1,18 @@
+[Unit]
+Description=Hermy HQ — Hermes mission control dashboard (Next.js 16 standalone)
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=code
+Group=code
+Environment=NODE_ENV=production
+Environment=HOSTNAME=127.0.0.1
+Environment=PORT=4023
+EnvironmentFile=/etc/hermyhq/hermyhq.env
+ExecStart=/nix/var/nix/profiles/hermyhq/bin/hermyhq
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

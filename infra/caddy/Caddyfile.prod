@@ -176,3 +176,6 @@ mcpedia.asepharyana.my.id {
 mcp.asepharyana.my.id {
 	import proxy 4021
 }
+hamc.asepharyana.my.id {
+	import proxy 4023
+}
