@@ -179,3 +179,7 @@ mcp.asepharyana.my.id {
 hamc.asepharyana.my.id {
 	import proxy 4023
 }
+
+dev.asepharyana.my.id {
+	import proxy 3000
+}
