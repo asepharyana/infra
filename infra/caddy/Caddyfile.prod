@@ -84,7 +84,7 @@ ai.asepharyana.my.id, ai.asepharyana.web.id {
 }
 
 pr-agent.asepharyana.my.id {
-	import proxy 4002
+	import proxy 4023
 }
 
 lidm.asepharyana.my.id {
