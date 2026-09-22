@@ -177,7 +177,7 @@ mcp.asepharyana.my.id {
 	import proxy 4021
 }
 hamc.asepharyana.my.id {
-	import proxy 4023
+	import proxy 4024
 }
 
 dev.asepharyana.my.id {

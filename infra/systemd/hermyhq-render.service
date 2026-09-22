@@ -1,0 +1,22 @@
+[Unit]
+Description=Hermy HQ — Shorts render worker (Remotion + TTS)
+After=network.target postgresql.service hermyhq.service
+Wants=hermyhq.service
+
+[Service]
+Type=simple
+User=code
+Group=code
+WorkingDirectory=/opt/hermyhq-renderer
+EnvironmentFile=/etc/hermyhq/hermyhq.env
+Environment=RENDER_DIR=/data/renders
+Environment=RENDER_SCRATCH=/tmp/hamc-render
+Environment=REMOTION_ROOT=/opt/hermyhq-renderer/src/remotion
+Environment=CHROME_BIN=/usr/bin/google-chrome-stable
+Environment=EDGE_TTS_BIN=/home/code/.hermes/hermes-agent/venv/bin/edge-tts
+ExecStart=/usr/bin/node /opt/hermyhq-renderer/scripts/render-worker.mjs
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

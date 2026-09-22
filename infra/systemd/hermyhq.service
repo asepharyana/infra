@@ -8,7 +8,7 @@ User=code
 Group=code
 Environment=NODE_ENV=production
 Environment=HOSTNAME=127.0.0.1
-Environment=PORT=4023
+Environment=PORT=4024
 EnvironmentFile=/etc/hermyhq/hermyhq.env
 ExecStart=/nix/var/nix/profiles/hermyhq/bin/hermyhq
 Restart=on-failure
